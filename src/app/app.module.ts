@@ -21,6 +21,8 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { ViewModalComponent } from '../../../../TMS/tms-ui-um/src/app/masterTable/ship-parcel/view-modal/view-modal.component';
 import { ViewmodalComponent } from './item/viewmodal/viewmodal.component';
+import { ItemService } from './item.service';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +47,7 @@ import { ViewmodalComponent } from './item/viewmodal/viewmodal.component';
     MatPaginatorModule,
     BrowserAnimationsModule,
     MatSortModule,
-    //ViewModalComponent,
+    // MatDialogModule,
   ],
   exports: [
     BrowserAnimationsModule,
@@ -57,9 +59,10 @@ import { ViewmodalComponent } from './item/viewmodal/viewmodal.component';
     BrowserAnimationsModule,
     MatPaginatorModule,
     MatSortModule,
+    // MatDialogModule,
     //ViewModalComponent,
   ],
-  providers: [CommonService],
+  providers: [CommonService, ItemService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, InjectionToken } from '@angular/core';
+
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-viewmodal',
@@ -6,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./viewmodal.component.css'],
 })
 export class ViewmodalComponent implements OnInit {
-  constructor() {}
-  item: any;
-  ngOnInit(): void {}
+  //constructor(private service: ItemService) {}
+  //MAT_DIALOG_DATA: InjectionToken<any>;
+  constructor() // @Inject(MAT_DIALOG_DATA) public data: any // public dialogRef: MatDialogRef<ViewmodalComponent>,
+  {}
 
-  public openItemDetails(item: any) {
-    console.log('inside the item details');
-    this.item = item;
-    console.log('item details ', this.item);
+  onNoClick(): void {
+    // this.dialogRef.close();
+  }
+  item: any;
+  //e: any;
+  ngOnInit(): void {
+    //this.openItemDetails(e);
   }
 }
