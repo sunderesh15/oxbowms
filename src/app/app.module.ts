@@ -19,10 +19,10 @@ import { ItemComponent } from './item/item.component';
 import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { ViewModalComponent } from '../../../../TMS/tms-ui-um/src/app/masterTable/ship-parcel/view-modal/view-modal.component';
 import { ViewmodalComponent } from './item/viewmodal/viewmodal.component';
 import { ItemService } from './item.service';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DashboardModule } from './dashboard/dashboard.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +60,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatPaginatorModule,
     MatSortModule,
     // MatDialogModule,
-    //ViewModalComponent,
   ],
   providers: [CommonService, ItemService],
   bootstrap: [AppComponent],

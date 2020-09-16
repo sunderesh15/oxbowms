@@ -24,6 +24,8 @@ const routes: Routes = [
     path: 'item',
     component: ItemComponent,
   },
+  { path: 'dashboard',
+   loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
 ];
 
 @NgModule({

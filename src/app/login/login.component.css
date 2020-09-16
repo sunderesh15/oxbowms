@@ -1,0 +1,56 @@
+/* Split the screen in half */
+.splitTop {
+    height: 40%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 20px;
+    top: 0;
+    left: 0;
+    background-color: #111;
+  }
+  
+  /* Control the bottom side */
+  .splitBottom {
+    height: 45%;
+    width: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    padding-top: 20px;
+    bottom: 0;
+    left: 0;
+  }
+
+  .input-group-prepend span{
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
+    }
+  
+   
+  /* If you want the content centered horizontally and vertically */
+  .centeredTop {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
