@@ -1,17 +1,9 @@
 import { Component, OnInit, ViewChild, InjectionToken } from '@angular/core';
-//import { MatTableModule } from '@angular/material/table';
-
-import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
-
-import { MatSort } from '@angular/material/sort';
 import { ViewmodalComponent } from './viewmodal/viewmodal.component';
 import { ItemService } from '../item.service';
-import {
-  MatDialog,
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-} from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-item',

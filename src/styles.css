@@ -1,7 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
-/* html, body { height: 100%; }
+    /* You can add global styles to this file, and also import other style files */
+    
+    @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+    /* html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+    
+    html,
+    body {
+        height: 100%;
+    }
+    
+    body {
+        margin: 0;
+        font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+    
+    html,
+    body {
+        height: 100%;
+    }
+    
+    body {
+        margin: 0;
+        font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+    
+    .mat-toolbar-row,
+    .mat-toolbar-single-row,
+    .mat-toolbar-multiple-rows {
+        height: 40px!important;
+        min-height: 40px!important;
+    }
+    
+    .custom-toolbar {
+        background-color: #80808075!important
+    }
+    
+    .custom-toolbar button {
+        width: 30px;
+    }
+    
+    .page-title {
+        border-bottom: 1px solid #8080801f;
+        margin: 0!important;
+    }
+    
+    .example-spacer {
+        flex: 1 1 auto;
+    }
+    
+    .active_deactive {
+        font-size: 13px;
+        color: grey;
+        font-weight: 400;
+        position: relative;
+        left: 7%;
+    }
+    
+    table {
+        width: 100%;
+    }
+    
+    .page-table {
+        padding: 10px;
+    }
+    
+    .mat-drawer-inner-container,
+    mat-toolbar {
+        background-color: black!important;
+    }
+    
+    mat-list-item {
+        color: white!important;
+    }
+    
+    mat-sidenav {
+        max-width: 151px;
+    }
+    
+    .menu-toolbar {
+        padding-top: 34px!important;
+        padding-bottom: 20px!important;
+    }
+    
+    .search-box {
+        background-color: #80808040!important;
+    }
+    
+    .search-icon {
+        transform: translateY(4px);
+    }
+    
+    .list-icons {
+        font-size: 20px!important;
+    }
+    
+    .mat-drawer-backdrop {
+        left: 150px!important;
+    }
+    
+    .custom-backdrop {
+        visibility: visible!important;
+        background: #00000085;
+    }

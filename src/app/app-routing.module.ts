@@ -15,17 +15,18 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
-  {
-    path: 'footer',
-    component: FotterComponent,
-  },
-
+  
   {
     path: 'item',
     component: ItemComponent,
   },
   { path: 'dashboard',
-   loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
+   loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+   },
+   {
+    path: '',
+    component: LoginComponent,
+  },
 ];
 
 @NgModule({

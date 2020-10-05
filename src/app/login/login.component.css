@@ -1,56 +1,37 @@
-/* Split the screen in half */
-.splitTop {
-    height: 40%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    overflow-x: hidden;
-    padding-top: 20px;
-    top: 0;
-    left: 0;
-    background-color: #111;
-  }
-  
-  /* Control the bottom side */
-  .splitBottom {
-    height: 45%;
-    width: 100%;
-    position: fixed;
-    overflow-x: hidden;
-    padding-top: 20px;
-    bottom: 0;
-    left: 0;
-  }
+.login-container {
+    padding: 4% 36%;
+}
 
-  .input-group-prepend span{
-    width: 50px;
-    background-color: #FFC312;
-    color: black;
-    border:0 !important;
-    }
-  
-   
-  /* If you want the content centered horizontally and vertically */
-  .centeredTop {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+.login-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
 
-  
-  /* If you want the content centered horizontally and vertically */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  /* Style the image inside the centered container, if needed */
-  .centered img {
-    width: 150px;
-    border-radius: 50%;
-  }
+.input-full-width {
+    width: 100%;
+}
+
+.login-btn {
+    float: right;
+    border-color: #0079b8;
+    background-color: #0079b8;
+}
+
+.login-icon {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 15px;
+}
+
+.head {
+    background: black;
+    color: white;
+    padding: 5%;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.login_title {
+    position: relative;
+    left: 40%;
+}
