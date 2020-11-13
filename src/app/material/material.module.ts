@@ -11,6 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 const modules = [
@@ -26,7 +27,8 @@ const modules = [
   MatFormFieldModule,
   MatButtonModule,
   MatMenuModule,
-  MatTableModule];
+  MatTableModule,
+  MatPaginatorModule];
 
 @NgModule({
   declarations: [],

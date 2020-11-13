@@ -27,4 +27,12 @@ export class ItemService {
   errorHandler(error: HttpErrorResponse) {
     return throwError(error);
   }
+
+
+  getItemService():Observable<any>{
+
+    var url="http://oxbowms-backend.us-east-2.elasticbeanstalk.com:80/company/1/facility/1/entityViewList?layoutId=1";
+  return this._http.get<any>(url)
+  
+}
 }

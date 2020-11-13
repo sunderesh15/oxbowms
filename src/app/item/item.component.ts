@@ -4,6 +4,7 @@ import { ItemService } from '../item.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { DataService } from './../services/data-service';
 
 @Component({
   selector: 'app-item',
@@ -12,19 +13,18 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class ItemComponent implements OnInit {
   constructor(private service: ItemService) {}
-  displayedColumns = ['shortDescription', 'longDescription1'];
+  //displayedColumns = ['shortDescription', 'longDescription1'];
   //ELEMENT_DATA: any;
-  //displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  res: Element[];
-  dataSource = new MatTableDataSource<Element>(this.res);
+  displayedColumns: string[] = ['sku', 'shortDescription', 'unitCost', 'unitVolume'];
+  data: any;
+  dataSource: MatTableDataSource<Element>;
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(ViewmodalComponent) viewmodal: ViewmodalComponent;
 
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+    
     this.loaditemData();
   }
 
@@ -39,12 +39,16 @@ export class ItemComponent implements OnInit {
     //     e,
     //   },
     // });
-    //this.service.itemData(item);
+    //return this.service.getItemService();
   }
 
   loaditemData() {
-    this.service.getItems().subscribe((res) => {
-      console.log(res);
+    this.service.getItemService().subscribe((res) => {
+     //res=this.data;
+     this.dataSource = new MatTableDataSource(res);
+     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+     console.log(this.dataSource);
     });
   }
 
@@ -55,10 +59,10 @@ export class ItemComponent implements OnInit {
 }
 
 export interface Element {
-  nshortDescriptioname: string;
-  longDescription1: string;
-  // weight: number;
-  // symbol: string;
+  sku: string;
+  shortDescription: string;
+   unitCost: number;
+  unitVolume: string;
 }
 
 //const ELEMENT_DATA: Element[] = this.ELEMENT_DATA;

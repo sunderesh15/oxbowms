@@ -17,6 +17,7 @@ import { ItemService } from './item.service';
 import {MaterialModule} from './material/material.module';
 import {HeaderComponent} from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { DataService } from './services/data-service';
 
 
 @NgModule({
