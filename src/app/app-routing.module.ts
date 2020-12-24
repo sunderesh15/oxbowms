@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FotterComponent } from './common/fotter/fotter.component';
-import { ItemComponent } from './item/item.component';
 
 const routes: Routes = [
   {
@@ -15,15 +14,15 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
-  
+
   {
     path: 'item',
-    component: ItemComponent,
+    loadChildren: () => import('./item/item.module').then(m => m.ItemModule)
   },
   { path: 'dashboard',
-   loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
-   },
-   {
+   loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) 
+  },
+  {
     path: '',
     component: LoginComponent,
   },

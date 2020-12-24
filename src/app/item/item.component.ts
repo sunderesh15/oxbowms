@@ -5,6 +5,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { DataService } from './../services/data-service';
+import { DataUtils } from './../utils/dataUtils';
+import { OxbowConstants } from './../constants/oxbowConstants';
 
 @Component({
   selector: 'app-item',
@@ -13,7 +15,7 @@ import { DataService } from './../services/data-service';
 })
 export class ItemComponent implements OnInit {
   constructor(private service: ItemService) {}
-  //displayedColumns = ['shortDescription', 'longDescription1'];
+    //displayedColumns = ['shortDescription', 'longDescription1'];
   //ELEMENT_DATA: any;
   displayedColumns: string[] = ['sku', 'shortDescription', 'unitCost', 'unitVolume'];
   data: any;
@@ -24,12 +26,12 @@ export class ItemComponent implements OnInit {
   @ViewChild(ViewmodalComponent) viewmodal: ViewmodalComponent;
 
   ngOnInit() {
-    
+
     this.loaditemData();
   }
 
   itemDetails(e: any) {
-    //console.log('inside the row' + event);
+    // console.log('inside the row' + event);
     const item = Object.assign({}, e);
     console.log(e);
     // this.viewmodal.openItemDetails(e);
@@ -39,17 +41,17 @@ export class ItemComponent implements OnInit {
     //     e,
     //   },
     // });
-    //return this.service.getItemService();
+    // this.service.itemData(item);
   }
 
   loaditemData() {
     this.service.getItemService().subscribe((res) => {
-     //res=this.data;
-     this.dataSource = new MatTableDataSource(res);
-     this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-     console.log(this.dataSource);
-    });
+      //res=this.data;
+      this.dataSource = new MatTableDataSource(res);
+      this.dataSource.paginator = this.paginator;
+     this.dataSource.sort = this.sort;
+      console.log(this.dataSource);
+     });
   }
 
   applyFilter(event: Event) {
@@ -64,5 +66,3 @@ export interface Element {
    unitCost: number;
   unitVolume: string;
 }
-
-//const ELEMENT_DATA: Element[] = this.ELEMENT_DATA;
